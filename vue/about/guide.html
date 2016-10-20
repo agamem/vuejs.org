@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>参与指南 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "about"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link current">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link current">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/about/index.html" class="sidebar-link">贡献者</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/about/guide.html" class="sidebar-link current">参与指南</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content about with-sidebar ">
+    
+      <h1>参与指南</h1>
+    
+    
+    <div id="contributors">
+<p>共 <span style="color:#e66;font-size:28px;" v-text="list.length "></span> 人参与贡献，排名不分先后，<a href="https://github.com/vuefe/vuejs.org/issues/192">如有遗漏，请告知</a></p>
+<ul class="contributors">
+  <a v-for="item in list"
+    class="contributor"
+    :href="'https://github.com/' + item.github" target="_blank">
+    <img class="contributor__img" :src="'https://github.com/' + item.github + '.png?size=64'" />
+    <p v-text="item.github" style="margin: 0;"></p>
+  </a>
+</ul>
+</div>
+
+<style>
+.contributor {
+  display: inline-block;
+  margin: 10px 15px;
+  text-align: center;
+}
+.contributor__img {
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+}
+</style>
+
+
+<script>
+new Vue({
+  el: "#contributors",
+  data: function() {
+    return {
+      list: [
+        {
+          github: 'dingyiming'
+        },{
+          github: '70data'
+        },{
+          github: 'bhnddowinf'
+        },{
+          github: 'dear-lizhihua'
+        },{
+          github: 'hilongjw'
+        },{
+          github: 'hijiangtao'
+        },{
+          github: 'ATLgo'
+        },{
+          github: 'daix6'
+        },{
+          github: 'hgcoder'
+        },{
+          github: 'yangzj1992'
+        },{
+          github: 'veaba'
+        },{
+          github: 'tingtien'
+        },{
+          github: 'ezreally'
+        },{
+          github: 'cuiyongjian'
+        },{
+          github: 'StoneQI'
+        },{
+          github: 'harrytospring'
+        },{
+          github: 'lindazhang102'
+        },{
+          github: '595074187'
+        },{
+          github: 'zhouzihanntu'
+        },{
+          github: 'mlyknown'
+        },{
+          github: 'yongbolv'
+        },{
+          github: 'yizhixiaolongxia'
+        },{
+          github: 'forzajuve10'
+        },{
+          github: 'coolzjy'
+        },{
+          github: 'tuxiantian'
+        },{
+          github: 'showonne'
+        },{
+          github: 'Luoxinfang'
+        },{
+          github: 'xie-qianyue'
+        },{
+          github: 'rocklau'
+        },{
+          github: 'shoglory'
+        },{
+          github: 'viko16'
+        },{
+          github: 'panzj'
+        },{
+          github: '	Creabine'
+        },{
+          github: 'shupande'
+        },{
+          github: 'ShangXinbo'
+        },{
+          github: 'swust-xiaoj'
+        },{
+          github: 'lichunqiang'
+        },{
+          github: 'athena0304'
+        },{
+          github: 'zhouxinyong'
+        },{
+          github: 'LightCi'
+        },{
+          github: 'MrZhang123'
+        },{
+          github: 'XyinM'
+        },{
+          github: 'homfen'
+        },{
+          github: 'sleelily'
+        },{
+          github: 'varHarrie'
+        },{
+          github: 'fytriht'
+        },{
+          github: 'yuzhiquan'
+        },{
+          github: 'LeoSpark'
+        },{
+          github: 'liyahui'
+        }
+      ]
+    };
+  }
+})
+</script>
+
+    
+    <blockquote>
+<p>目前急需校对</p>
+</blockquote>
+<h2 id="参与要求"><a href="#参与要求" class="headerlink" title="参与要求"></a>参与要求</h2><h3 id="参与："><a href="#参与：" class="headerlink" title="参与："></a>参与：</h3><blockquote>
+<p>参与请阅读 <a href="https://github.com/vuefe/vuejs.org/wiki/%E7%BF%BB%E8%AF%91%E8%A7%84%E8%8C%83" target="_blank" rel="external">翻译规范</a></p>
+</blockquote>
+<ul>
+<li>加群参与 <code>427447379</code> </li>
+<li><a href="http://vuefe.cn/">发布网址：vuefe.cn</a></li>
+<li><a href="https://github.com/vuefe/vuejs.org" target="_blank" rel="external">翻译仓库</a> ，中文翻译分支 2.0-cn</li>
+<li><a href="https://github.com/vuefe/vuejs.org/wiki/%E5%85%B3%E4%BA%8E%E7%BF%BB%E8%AF%91---%E5%9F%BA%E7%A1%80%E6%8C%87%E5%BC%95" target="_blank" rel="external">基础指引</a></li>
+<li>参与API翻译：<a href="https://github.com/vuefe/vuejs.org/issues/44" target="_blank" rel="external">https://github.com/vuefe/vuejs.org/issues/44</a></li>
+<li>参与Guide校对：<a href="https://github.com/vuefe/vuejs.org/issues/77" target="_blank" rel="external">https://github.com/vuefe/vuejs.org/issues/77</a></li>
+<li>提出建议：<a href="https://github.com/vuefe/vuejs.org/issues/48" target="_blank" rel="external">https://github.com/vuefe/vuejs.org/issues/48</a></li>
+<li>如果你看到错别字、漏译、错译，请直接提交 pr<br>  （<a href="https://help.github.com/articles/using-pull-requests/" target="_blank" rel="external">帮助</a>）。</li>
+<li>如果你看到网站问题，或者创建一个 issue，或者直接提交 pr。</li>
+<li>如果你对已有翻译有异议，建议创建一个 issue 讨论。</li>
+<li>如果你想修改英文内容，请去 [vuejs.org 项目][vuejs.org]。</li>
+<li>如果你想求教 Vue.js 使用问题，请去[论坛][forum]。</li>
+<li>如果你遇到 Vue.js 的问题，请去 [vue 项目][vue]，<br>  创建 issue 并提供演示。可以在 JSBin, JSFiddle, Codepen 等网站创建演示。</li>
+</ul>
+<h3 id="翻译要求"><a href="#翻译要求" class="headerlink" title="翻译要求"></a>翻译要求</h3><ul>
+<li>保持一致，清晰</li>
+<li>汉字，字母，数字等之间以一个空格隔开。</li>
+<li>中文使用中文符号，英文使用英文符号。</li>
+<li>专有词注意大小写，如 HTML，CSS，JavaScript。</li>
+<li>术语与已有译文保持一致，如果有异议请先在 issue 中讨论。</li>
+<li>代码只翻译注释。</li>
+<li>标题会转化为链接，文档其它地方可能会用到，所以标题应尽量简短，<br>  在修改标题时搜索一下它是否还用在其它地方。<br>  同样的，在修改文档内链接时也应搜索一下。</li>
+<li>校对后对应修改提交合并请求</li>
+</ul>
+<h3 id="统一固定词汇翻译"><a href="#统一固定词汇翻译" class="headerlink" title="统一固定词汇翻译"></a>统一固定词汇翻译</h3><ul>
+<li>Type =&gt; 类型</li>
+<li>See also =&gt; 另见</li>
+<li>Details =&gt; 详细</li>
+<li>Options =&gt; 选项</li>
+<li>Example =&gt; 示例</li>
+<li>Restriction =&gt; 限制</li>
+<li>default =&gt; 默认值</li>
+<li>prop =&gt; 特性（是指 一个 API 时候，不要翻译成中文）</li>
+<li>attribute =&gt; 特性</li>
+<li>transition =&gt; 过渡</li>
+</ul>
+<h3 id="术语翻译对照"><a href="#术语翻译对照" class="headerlink" title="术语翻译对照"></a>术语翻译对照</h3><ul>
+<li>attribute 特性</li>
+<li>transition 过渡</li>
+</ul>
+<h3 id="不翻译的术语"><a href="#不翻译的术语" class="headerlink" title="不翻译的术语"></a>不翻译的术语</h3><ul>
+<li>getter</li>
+<li>setter</li>
+<li>prop（指API时）</li>
+</ul>
+<h3 id="认领说明"><a href="#认领说明" class="headerlink" title="认领说明"></a>认领说明</h3><ul>
+<li>参与前，请在对应issue认领</li>
+<li><p>认领格式 ：</p>
+<ul>
+<li>未完成<ul>
+<li>[ ] 我校对 + <code>文档序号</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>markdown语法 - 示例</p>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><div class="line"><span class="bullet">- </span>[ ] 我xx <span class="code">`1`</span></div></pre></td></tr></table></figure>
+<ul>
+<li>完成后，打钩表示完成，并附带 发起的合并请求链接<ul>
+<li>[x] 我校对 + <code>文档序号</code> +  <a href="https://github.com/vuefe/vuejs.org/pull/65" target="_blank" rel="external">https://github.com/vuefe/vuejs.org/pull/65</a>  (发起的合并请求链接)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>markdown语法 - 示例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><div class="line"><span class="bullet">- </span>[x] 我xx + <span class="code">`1 `</span> https://github.com/vuefe/vuejs.org/pull/65  (发起的合并请求链接)</div></pre></td></tr></table></figure>
+<ul>
+<li>支持多人协作翻译，冲突可以解决，认领过的，如果你觉着他太慢，可以再次认领，加速翻译，知道大家都是牺牲业余时间来贡献，所以慢也是可以理解的，慢就需要大家一起帮帮忙了！谢谢。</li>
+</ul>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/about/guide.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

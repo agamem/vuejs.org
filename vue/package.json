@@ -1,0 +1,30 @@
+{
+  "name": "vuefe.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "6.x"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "leanengine": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuefe/vuefe.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuefe/vuefe.github.io/issues"
+  },
+  "homepage": "https://github.com/vuefe/vuefe.github.io#readme"
+}

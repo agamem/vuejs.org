@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>测试 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "vuex"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/index.html" class="sidebar-link">Vuex 目录</a>
+                </li>
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/intro.html" class="sidebar-link">什么是 Vuex</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getting-started.html" class="sidebar-link">起步</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/state.html" class="sidebar-link">State</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getters.html" class="sidebar-link">Getters</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/mutations.html" class="sidebar-link">Mutations</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/actions.html" class="sidebar-link">Actions</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/modules.html" class="sidebar-link">Modules</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/structure.html" class="sidebar-link">应用结构</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/plugins.html" class="sidebar-link">插件</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/strict.html" class="sidebar-link">严格模式</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/forms.html" class="sidebar-link">表单处理</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/testing.html" class="sidebar-link current">测试</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/hot-reload.html" class="sidebar-link">热重载</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/api.html" class="sidebar-link">API 参考</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content vuex with-sidebar ">
+    
+      <h1>测试</h1>
+    
+    
+    <p>我们主要针对Vuex中的mutaions 和actions进行单元测试。</p>
+<h3 id="测试-Mutations"><a href="#测试-Mutations" class="headerlink" title="测试 Mutations"></a>测试 Mutations</h3><p>Mutations 很容易被测试，因为它们仅仅是一些完全依赖参数的函数。小技巧是，如果你在 <code>store.js</code> 文件中定义了 mutations，并且使用 ES2015 模块功能默认输出，那么你仍然可以给 mutations 取个变量名然后把它输出去：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> state = &#123; ... &#125;</div><div class="line"><span class="comment">//取个变量名并输出mutations</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> mutations = &#123; ... &#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  state,</div><div class="line">  mutations</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>以下为使用 Mocha + chai 测试 mutation 的例子（实际上你可以用任何你喜欢测试框架）</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// mutations.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> mutations = &#123;</div><div class="line">  <span class="attr">increment</span>: <span class="function"><span class="params">state</span> =&gt;</span> state.count++</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// mutations.spec.js</span></div><div class="line"><span class="keyword">import</span> &#123; expect &#125; <span class="keyword">from</span> <span class="string">'chai'</span></div><div class="line"><span class="keyword">import</span> &#123; mutations &#125; <span class="keyword">from</span> <span class="string">'./store'</span></div><div class="line"></div><div class="line"><span class="comment">// 解构赋值mutations（destructure assign mutations）</span></div><div class="line"><span class="keyword">const</span> &#123; increment &#125; = mutations</div><div class="line"></div><div class="line">describe(<span class="string">'mutations'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'INCREMENT'</span>, () =&gt; &#123;</div><div class="line">    <span class="comment">// mock state</span></div><div class="line">    <span class="keyword">const</span> state = &#123; <span class="attr">count</span>: <span class="number">0</span> &#125;</div><div class="line">    <span class="comment">// apply mutation</span></div><div class="line">    increment(state)</div><div class="line">    <span class="comment">// assert result</span></div><div class="line">    expect(state.count).to.equal(<span class="number">1</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="测试-Actions"><a href="#测试-Actions" class="headerlink" title="测试 Actions"></a>测试 Actions</h3><p>Actions 可能会更加棘手一些，因为他们可能要求请求外部API.</p>
+<p>当测试actions时，我们通常需要增加mocking服务层——例如，我们可以把API调用抽象成服务，然后我们在测试中模拟这种服务。为了便于解决mock的依赖关系，可以用 Webpack 和 <a href="https://github.com/plasticine/inject-loader" target="_blank" rel="external">inject-loader</a> 打包测试文件。</p>
+<p>异步action测试示例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// actions.js</span></div><div class="line"><span class="keyword">import</span> shop <span class="keyword">from</span> <span class="string">'../api/shop'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> getAllProducts = <span class="function">(<span class="params">&#123; dispatch &#125;</span>) =&gt;</span> &#123;</div><div class="line">  dispatch(<span class="string">'REQUEST_PRODUCTS'</span>)</div><div class="line">  shop.getProducts(<span class="function"><span class="params">products</span> =&gt;</span> &#123;</div><div class="line">    dispatch(<span class="string">'RECEIVE_PRODUCTS'</span>, products)</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// actions.spec.js</span></div><div class="line"><span class="comment">// 使用 require 语法处理内联loaders</span></div><div class="line"><span class="comment">//inject-loader,返回一个模块工厂</span></div><div class="line"><span class="comment">//让我们能够注入mocked的依赖关系。</span></div><div class="line"><span class="keyword">import</span> &#123; expect &#125; <span class="keyword">from</span> <span class="string">'chai'</span></div><div class="line"><span class="keyword">const</span> actionsInjector = <span class="built_in">require</span>(<span class="string">'inject!./actions'</span>)</div><div class="line"></div><div class="line"><span class="comment">//使用mocks创建模块</span></div><div class="line"><span class="keyword">const</span> actions = actionsInjector(&#123;</div><div class="line">  <span class="string">'../api/shop'</span>: &#123;</div><div class="line">    getProducts (cb) &#123;</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        cb([ <span class="comment">/* mocked response */</span> ])</div><div class="line">      &#125;, <span class="number">100</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//用指定的mutatios测试action的辅助函数</span></div><div class="line"><span class="keyword">const</span> testAction = <span class="function">(<span class="params">action, args, state, expectedMutations, done</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> count = <span class="number">0</span></div><div class="line"></div><div class="line">  <span class="comment">// mock 提交</span></div><div class="line">  <span class="keyword">const</span> commit = <span class="function">(<span class="params">type, payload</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> mutation = expectedMutations[count]</div><div class="line">    expect(mutation.type).to.equal(type)</div><div class="line">    <span class="keyword">if</span> (payload) &#123;</div><div class="line">      expect(mutation.payload).to.deep.equal(payload)</div><div class="line">    &#125;</div><div class="line">    count++</div><div class="line">    <span class="keyword">if</span> (count &gt;= expectedMutations.length) &#123;</div><div class="line">      done()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 用模拟的 store 和参数调用 action</span></div><div class="line">  action(&#123; commit, state &#125;, ...args)</div><div class="line"></div><div class="line">  <span class="comment">// 检查是否没有 mutation 被 dispatch</span></div><div class="line">  <span class="keyword">if</span> (expectedMutations.length === <span class="number">0</span>) &#123;</div><div class="line">    expect(count).to.equal(<span class="number">0</span>)</div><div class="line">    done()</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">describe(<span class="string">'actions'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'getAllProducts'</span>, done =&gt; &#123;</div><div class="line">    testAction(actions.getAllProducts, [], &#123;&#125;, [</div><div class="line">      &#123; <span class="attr">type</span>: <span class="string">'REQUEST_PRODUCTS'</span> &#125;,</div><div class="line">      &#123; <span class="attr">type</span>: <span class="string">'RECEIVE_PRODUCTS'</span>, <span class="attr">payload</span>: &#123; <span class="comment">/* mocked response */</span> &#125; &#125;</div><div class="line">    ], done)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="测试-Getters"><a href="#测试-Getters" class="headerlink" title="测试 Getters"></a>测试 Getters</h3><p>如果你的getters方法很复杂，那么你得测试他们。测试Getter 方法和测试mutations一样非常简单！</p>
+<p>测试getter实例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// getters.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> getters = &#123;</div><div class="line">  filteredProducts (state, &#123; filterCategory &#125;) &#123;</div><div class="line">    <span class="keyword">return</span> state.products.filter(<span class="function"><span class="params">product</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> product.category === filterCategory</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// getters.spec.js</span></div><div class="line"><span class="keyword">import</span> &#123; expect &#125; <span class="keyword">from</span> <span class="string">'chai'</span></div><div class="line"><span class="keyword">import</span> &#123; getters &#125; <span class="keyword">from</span> <span class="string">'./getters'</span></div><div class="line"></div><div class="line">describe(<span class="string">'getters'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'filteredProducts'</span>, () =&gt; &#123;</div><div class="line">    <span class="comment">// mock 状态</span></div><div class="line">    <span class="keyword">const</span> state = &#123;</div><div class="line">      <span class="attr">products</span>: [</div><div class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">'Apple'</span>, <span class="attr">category</span>: <span class="string">'fruit'</span> &#125;,</div><div class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">title</span>: <span class="string">'Orange'</span>, <span class="attr">category</span>: <span class="string">'fruit'</span> &#125;,</div><div class="line">        &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">title</span>: <span class="string">'Carrot'</span>, <span class="attr">category</span>: <span class="string">'vegetable'</span> &#125;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// mock getter</span></div><div class="line">    <span class="keyword">const</span> filterCategory = <span class="string">'fruit'</span></div><div class="line"></div><div class="line">    <span class="comment">// 从getter中取回值</span></div><div class="line">    <span class="keyword">const</span> result = getters.filteredProducts(state, &#123; filterCategory &#125;)</div><div class="line"></div><div class="line">    <span class="comment">// 声明返回值</span></div><div class="line">    expect(result).to.deep.equal([</div><div class="line">      &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">'Apple'</span>, <span class="attr">category</span>: <span class="string">'fruit'</span> &#125;,</div><div class="line">      &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">title</span>: <span class="string">'Orange'</span>, <span class="attr">category</span>: <span class="string">'fruit'</span> &#125;</div><div class="line">    ])</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h3><p>如果你的 mutations 和 actions 已经正确，后面应该在适合的mocking上浏览器测试API的依赖关系。</p>
+<h4 id="在Node上运行"><a href="#在Node上运行" class="headerlink" title="在Node上运行"></a>在Node上运行</h4><p>创建下面的webpack配置（加上适合<a href="https://babeljs.io/docs/usage/babelrc/" target="_blank" rel="external"><code>.babelrc</code></a>）：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./test.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">path</span>: __dirname,</div><div class="line">    <span class="attr">filename</span>: <span class="string">'test-bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel'</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">webpack</div><div class="line">mocha <span class="built_in">test</span>-bundle.js</div></pre></td></tr></table></figure>
+<h4 id="在浏览器上运行"><a href="#在浏览器上运行" class="headerlink" title="在浏览器上运行"></a>在浏览器上运行</h4><ol>
+<li>安装 <code>mocha-loader</code></li>
+<li>把上述 webpack 配置中的 entry 改成 ‘mocha!babel!./test.js’</li>
+<li>用以上配置启动 <code>webpack-dev-server</code> </li>
+<li>访问 <code>localhost:8080/webpack-dev-server/test-bundle</code>.</li>
+</ol>
+<h4 id="使用Karma-karma-webpack在浏览器中测试"><a href="#使用Karma-karma-webpack在浏览器中测试" class="headerlink" title="使用Karma + karma-webpack在浏览器中测试"></a>使用Karma + karma-webpack在浏览器中测试</h4><p>详细的安装咨询见<a href="http://vue-loader.vuejs.org/en/workflow/testing.html" target="_blank" rel="external">vue-loader documentation</a>.</p>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/vuex/testing.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

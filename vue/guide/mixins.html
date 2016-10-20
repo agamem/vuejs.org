@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>混合 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            教程
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">介绍</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue 实例</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">模板语法</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">计算属性</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">Class 与 Style 绑定</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件渲染</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">列表渲染</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">事件处理器</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">表单控件绑定</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">组件</a>
+                </li>
+            
+                
+                
+                
+                  <li><h3>进阶</h3></li>
+                
+                
+                
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">过渡效果</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/transitioning-state.html" class="sidebar-link">过渡状态</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/render-function.html" class="sidebar-link">Render 函数</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">深入响应式原理</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">自定义指令</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link current">混合</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">插件</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/single-file-components.html" class="sidebar-link">单文件组件</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/deployment.html" class="sidebar-link">生产环境部署</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/routing.html" class="sidebar-link">路由</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/state-management.html" class="sidebar-link">状态管理</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/unit-testing.html" class="sidebar-link">单元测试</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/ssr.html" class="sidebar-link">服务端渲染</a>
+                </li>
+            
+                
+                
+                
+                
+                  <li><h3>迁移</h3></li>
+                
+                
+                <li>
+                    <a href="/guide/migration.html" class="sidebar-link">从 Vue 1.x 迁移</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/migration-vue-router.html" class="sidebar-link">从 Vue Router 0.7.x 迁移</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/migration-vuex.html" class="sidebar-link">从 Vuex 0.6.x 迁移到 1.0</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                  <li><h3>更多</h3></li>
+                
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">对比其他框架</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar mixins-guide">
+    
+      <h1>混合</h1>
+    
+    
+    <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>混合是一种灵活的分布式复用 Vue 组件的方式。混合对象可以包含任意组件选项。以组件使用混合对象时，所有混合对象的选项将被混入该组件本身的选项。</p>
+<p>例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 定义一个混合对象</span></div><div class="line"><span class="keyword">var</span> myMixin = &#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.hello()</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">hello</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'hello from mixin!'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 定义一个使用混合对象的组件</span></div><div class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</div><div class="line">  <span class="attr">mixins</span>: [myMixin]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> component = <span class="keyword">new</span> Component() <span class="comment">// -&gt; "hello from mixin!"</span></div></pre></td></tr></table></figure>
+<h2 id="选项合并"><a href="#选项合并" class="headerlink" title="选项合并"></a>选项合并</h2><p>当组件和混合对象含有同名选项时，这些选项将以恰当的方式混合。比如，同名钩子函数将混合为一个数组，因此都将被调用。另外，混合对象的 钩子将在组件自身钩子 <strong>之前</strong> 调用 ：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> mixin = &#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'mixin hook called'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">mixins</span>: [mixin],</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'component hook called'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// -&gt; "混合对象的钩子被调用"</span></div><div class="line"><span class="comment">// -&gt; "组件钩子被调用"</span></div></pre></td></tr></table></figure>
+<p>值为对象的选项，例如 <code>methods</code>, <code>components</code> 和 <code>directives</code>，将被混合为同一个对象。 两个对象键名冲突时，取组件对象的键值对。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> mixin = &#123;</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">foo</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'foo'</span>)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">conflicting</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'from mixin'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">mixins</span>: [mixin],</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">bar</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'bar'</span>)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">conflicting</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'from self'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.foo() <span class="comment">// -&gt; "foo"</span></div><div class="line">vm.bar() <span class="comment">// -&gt; "bar"</span></div><div class="line">vm.conflicting() <span class="comment">// -&gt; "from self"</span></div></pre></td></tr></table></figure>
+<p>注意： <code>Vue.extend()</code> 也使用同样的策略进行合并。</p>
+<h2 id="全局混合"><a href="#全局混合" class="headerlink" title="全局混合"></a>全局混合</h2><p>也可以全局注册混合对象。 注意使用！ 一旦使用全局混合对象，将会影响到 <strong>所有</strong> 之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 为自定义的选项 'myOption' 注入一个处理器。 </span></div><div class="line">Vue.mixin(&#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> myOption = <span class="keyword">this</span>.$options.myOption</div><div class="line">    <span class="keyword">if</span> (myOption) &#123;</div><div class="line">      <span class="built_in">console</span>.log(myOption)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">myOption</span>: <span class="string">'hello!'</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// -&gt; "hello!"</span></div></pre></td></tr></table></figure>
+<p class="tip">谨慎使用全局混合对象，因为会影响到每个单独创建的 Vue 实例（包括第三方模板）。大多数情况下，只应当应用于自定义选项，就像上面示例一样。 也可以将其用作 <a href="/guide/plugins.html">Plugins</a> 以避免产生重复应用</p>
+
+<h2 id="自定义选项混合策略"><a href="#自定义选项混合策略" class="headerlink" title="自定义选项混合策略"></a>自定义选项混合策略</h2><p>自定义选项将使用默认策略，即简单地覆盖已有值。 如果想让自定义选项以自定义逻辑混合，可以向 <code>Vue.config.optionMergeStrategies</code> 添加一个函数：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.optionMergeStrategies.myOption = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</div><div class="line">  <span class="comment">// return mergedVal</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于大多数对象选项，可以使用 <code>methods</code> 的合并策略:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> strategies = Vue.config.optionMergeStrategies</div><div class="line">strategies.myOption = strategies.methods</div></pre></td></tr></table></figure>
+<p>更多高级的例子可以在 <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">Vuex</a> 1.x的混合策略里找到:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> merge = Vue.config.optionMergeStrategies.computed</div><div class="line">Vue.config.optionMergeStrategies.vuex = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!toVal) <span class="keyword">return</span> fromVal</div><div class="line">  <span class="keyword">if</span> (!fromVal) <span class="keyword">return</span> toVal</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">getters</span>: merge(toVal.getters, fromVal.getters),</div><div class="line">    <span class="attr">state</span>: merge(toVal.state, fromVal.state),</div><div class="line">    <span class="attr">actions</span>: merge(toVal.actions, fromVal.actions)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>原文： <a href="http://vuejs.org/guide/mixins.html" target="_blank" rel="external">http://vuejs.org/guide/mixins.html</a></p>
+</blockquote>
+<hr>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/custom-directive.html">自定义指令</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/plugins.html">插件</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/guide/mixins.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

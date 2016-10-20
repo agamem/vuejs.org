@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>导航钩子 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "vue-router"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link current">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link current">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/index.html" class="sidebar-link">目录</a>
+                </li>
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/getting-started.html" class="sidebar-link">起步</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/dynamic-matching.html" class="sidebar-link">动态路由匹配</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/nested-routes.html" class="sidebar-link">嵌套路由</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/navigation.html" class="sidebar-link">编程式的导航</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/named-routes.html" class="sidebar-link">命名路由</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/named-views.html" class="sidebar-link">命名视图</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/redirect-and-alias.html" class="sidebar-link">重定向 和 别名</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/history-mode.html" class="sidebar-link">HTML5 History 模式</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/navigation-guards.html" class="sidebar-link current">导航钩子</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/meta.html" class="sidebar-link">路由元信息</a>
+                </li>
+            
+                
+                
+                
+                  <li><h3>进阶</h3></li>
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/transitions.html" class="sidebar-link">过渡动效</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/data-fetching.html" class="sidebar-link">数据获取</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/scroll-behavior.html" class="sidebar-link">滚动行为</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/lazy-loading.html" class="sidebar-link">路由懒加载</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-link.html" class="sidebar-link">router-link</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-view.html" class="sidebar-link">router-view</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/route-object.html" class="sidebar-link">路由信息对象</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/options.html" class="sidebar-link">Router 构造配置</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-instance.html" class="sidebar-link">Router 实例</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/component-injections.html" class="sidebar-link">对组件注入</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content vue-router with-sidebar ">
+    
+      <h1>导航钩子</h1>
+    
+    
+    <blockquote>
+<p>（译者：『导航』表示路由正在发生改变。）</p>
+</blockquote>
+<p>正如其名，<code>vue-router</code> 提供的导航钩子主要用来拦截导航，让它完成跳转或取消。有多种方式可以在路由导航发生时执行钩子：全局的，单个路由独享的，或者组件级的。</p>
+<h3 id="全局钩子"><a href="#全局钩子" class="headerlink" title="全局钩子"></a>全局钩子</h3><p>你可以使用 <code>router.beforeEach</code> 注册一个全局的 <code>before</code> 钩子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123; ... &#125;)</div><div class="line"></div><div class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>当一个导航触发时，全局的 <code>before</code> 钩子按照创建顺序调用。钩子是异步解析执行，此时导航在所有钩子 resolve 完之前一直处于 <strong>等待中</strong>。</p>
+<p>每个钩子方法接收三个参数：</p>
+<ul>
+<li><p><strong><code>to: Route</code></strong>: 即将要进入的目标 <a href="../api/route-object.md">路由对象</a></p>
+</li>
+<li><p><strong><code>from: Route</code></strong>: 当前导航正要离开的路由</p>
+</li>
+<li><p><strong><code>next: Function</code></strong>: 一定要调用该方法来 <strong>resolve</strong> 这个钩子。执行效果依赖 <code>next</code> 方法的调用参数。</p>
+<ul>
+<li><p><strong><code>next()</code></strong>: 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 <strong>confirmed</strong> （确认的）。</p>
+</li>
+<li><p><strong><code>next(false)</code></strong>: 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 <code>from</code> 路由对应的地址。</p>
+</li>
+<li><p><strong><code>next(&#39;/&#39;)</code> 或者 <code>next({ path: &#39;/&#39; })</code></strong>: 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>确保要调用 <code>next</code> 方法，否则钩子就不会被 resolved。</strong></p>
+<p>同样可以注册一个全局的 <code>after</code> 钩子，不过它不像 <code>before</code> 钩子那样，<code>after</code> 钩子没有 <code>next</code> 方法，不能改变导航：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.afterEach(<span class="function"><span class="params">route</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="某个路由独享的钩子"><a href="#某个路由独享的钩子" class="headerlink" title="某个路由独享的钩子"></a>某个路由独享的钩子</h3><p>你可以在路由配置上直接定义 <code>beforeEnter</code> 钩子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">path</span>: <span class="string">'/foo'</span>,</div><div class="line">      <span class="attr">component</span>: Foo,</div><div class="line">      <span class="attr">beforeEnter</span>: <span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>这些钩子与全局 <code>before</code> 钩子的方法参数是一样的。</p>
+<h3 id="组件内的钩子"><a href="#组件内的钩子" class="headerlink" title="组件内的钩子"></a>组件内的钩子</h3><p>最后，你可以使用 <code>beforeRouteEnter</code> 和 <code>beforeRouteLeave</code>，在路由组件内直接定义路由导航钩子，</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> Foo = &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">`...`</span>,</div><div class="line">  beforeRouteEnter (to, <span class="keyword">from</span>, next) =&gt; &#123;</div><div class="line">    <span class="comment">// 在渲染该组件的对应路由被 confirm 前调用</span></div><div class="line">    <span class="comment">// 不！能！获取组件实例 `this`</span></div><div class="line">    <span class="comment">// 因为当钩子执行前，组件实例还没被创建</span></div><div class="line">  &#125;,</div><div class="line">  beforeRouteLeave (to, <span class="keyword">from</span>, next) =&gt; &#123;</div><div class="line">    <span class="comment">// 导航离开该组件的对应路由时调用</span></div><div class="line">    <span class="comment">// 可以访问组件实例 `this`</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>beforeRouteEnter</code> 钩子 <strong>不能</strong> 访问 <code>this</code>，因为钩子在导航确认前被调用,因此即将登场的新组件还没被创建。</p>
+<p>不过，你可以通过传一个回调给 <code>next</code>来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">beforeRouteEnter (to, <span class="keyword">from</span>, next) =&gt; &#123;</div><div class="line">  next(<span class="function"><span class="params">vm</span> =&gt;</span> &#123;</div><div class="line">    <span class="comment">// 通过 `vm` 访问组件实例</span></div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你可以 在 <code>beforeRouteLeave</code> 中直接访问 <code>this</code>。这个 <code>leave</code> 钩子通常用来禁止用户在还未保存修改前突然离开。可以通过 <code>next(false)</code> 来取消导航。</p>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/vue-router/advanced/navigation-guards.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

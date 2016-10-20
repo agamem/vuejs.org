@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mutations - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "vuex"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/index.html" class="sidebar-link">Vuex 目录</a>
+                </li>
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/intro.html" class="sidebar-link">什么是 Vuex</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getting-started.html" class="sidebar-link">起步</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/state.html" class="sidebar-link">State</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getters.html" class="sidebar-link">Getters</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/mutations.html" class="sidebar-link current">Mutations</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/actions.html" class="sidebar-link">Actions</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/modules.html" class="sidebar-link">Modules</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/structure.html" class="sidebar-link">应用结构</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/plugins.html" class="sidebar-link">插件</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/strict.html" class="sidebar-link">严格模式</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/forms.html" class="sidebar-link">表单处理</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/testing.html" class="sidebar-link">测试</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/hot-reload.html" class="sidebar-link">热重载</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/api.html" class="sidebar-link">API 参考</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content vuex with-sidebar ">
+    
+      <h1>Mutations</h1>
+    
+    
+    <p>在 Vuex store 中，实际改变 状态(state) 的唯一方式是通过 提交(commit) 一个 mutation。 Vuex 的 mutation 和事件系统非常相似：每个 mutation 都有一个字符串 <strong>类型(type)</strong> 和 一个 <strong>回调函数(handler)</strong>。回调函数是我们执行实际修改状态的地方，它将接收 状态(state) 作为第一个参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  <span class="attr">state</span>: &#123;</div><div class="line">    <span class="attr">count</span>: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">mutations</span>: &#123;</div><div class="line">    increment (state) &#123;</div><div class="line">      <span class="comment">// 改变 state</span></div><div class="line">      state.count++</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>你不能直接调用 mutation 的回调函数。选项 mutations 在这里更像是注册事件：“当触发类型为 <code>increment</code> 的 mutation 时，执行其回调函数。”所以你需要调用该类型的 <strong>store.commit</strong> 才能执行 mutation 的回调函数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(<span class="string">'increment'</span>)</div></pre></td></tr></table></figure>
+<h3 id="Commit-传入-Payload"><a href="#Commit-传入-Payload" class="headerlink" title="Commit 传入 Payload"></a>Commit 传入 Payload</h3><p>向 <code>store.commit</code> 传递一个额外的参数，这个参数被称为 <strong>payload</strong> ：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">mutations: &#123;</div><div class="line">  increment (state, n) &#123;</div><div class="line">    state.count += n</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(<span class="string">'increment'</span>, <span class="number">10</span>)</div></pre></td></tr></table></figure>
+<p>多数情况下，payload 应该是一个对象，以便它可以包含多个字段，这样 mutation 记录中有了 payload 字段名，可描述性会变得更好。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">mutations: &#123;</div><div class="line">  increment (state, payload) &#123;</div><div class="line">    state.count += payload.amount</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(<span class="string">'increment'</span>, &#123;</div><div class="line">  <span class="attr">amount</span>: <span class="number">10</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="对象风格的-Commit"><a href="#对象风格的-Commit" class="headerlink" title="对象风格的 Commit"></a>对象风格的 Commit</h3><p>提交 mutation 的另一种替代方式，是直接使用具有 <code>type</code> 属性的对象：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(&#123;</div><div class="line">  <span class="attr">type</span>: <span class="string">'increment'</span>,</div><div class="line">  <span class="attr">amount</span>: <span class="number">10</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>当使用对象风格的 commit，整个对象都会被作为 payload 参数传入到对应类型的 mutation 的回调函数中，不过回调函数还保持不变：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">mutations: &#123;</div><div class="line">  increment (state, payload) &#123;</div><div class="line">    state.count += payload.amount</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="静默的-Commit"><a href="#静默的-Commit" class="headerlink" title="静默的 Commit"></a>静默的 Commit</h3><blockquote>
+<p>注意：一旦我们实现了 devtools 中过滤 mutation，此特性可能会被弃用。</p>
+</blockquote>
+<p>默认情况下，每个提交过的 mutation 都会被发送到插件（如 devtools）。然而在某些情况下，你可能不希望插件去记录每个状态更改。像是在短时间多次提交到 store 或轮询，并不总是需要跟踪。在这种情况下你可以在 <code>store.commit</code> 中传入第三个参数，来指定插件中的 mutation 是否“静默”。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(<span class="string">'increment'</span>, &#123;</div><div class="line">  <span class="attr">amount</span>: <span class="number">1</span></div><div class="line">&#125;, &#123; <span class="attr">silent</span>: <span class="literal">true</span> &#125;)</div><div class="line"></div><div class="line"><span class="comment">// 使用对象风格的 dispatch</span></div><div class="line">store.commit(&#123;</div><div class="line">  <span class="attr">type</span>: <span class="string">'increment'</span>,</div><div class="line">  <span class="attr">amount</span>: <span class="number">1</span></div><div class="line">&#125;, &#123; <span class="attr">silent</span>: <span class="literal">true</span> &#125;)</div></pre></td></tr></table></figure>
+<h3 id="遵循-Vue-响应式规则"><a href="#遵循-Vue-响应式规则" class="headerlink" title="遵循 Vue 响应式规则"></a>遵循 Vue 响应式规则</h3><p>由于 Vue 中 Vuex store 的状态是响应式的，当我们改变状态，Vue 组件观察到状态改变将自动更新。这也意味着 Vuex mutation 同样遵循纯 Vue 响应式规则。</p>
+<ol>
+<li><p>推荐预先初始化 store 中你所需的初始状态。</p>
+</li>
+<li><p>向对象添加新的属性时，你应该这样做：</p>
+<ul>
+<li><p>使用 <code>Vue.set(obj, &#39;newProp&#39;, 123)</code></p>
+</li>
+<li><p>用新的对象替换该对象。例如，使用 stage-2 <a href="https://github.com/sebmarkbage/ecmascript-rest-spread" target="_blank" rel="external">对象扩展语法</a> 我们可以这样写：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">state.obj = &#123; ...state.obj, <span class="attr">newProp</span>: <span class="number">123</span> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="用常量命名-Mutation"><a href="#用常量命名-Mutation" class="headerlink" title="用常量命名 Mutation"></a>用常量命名 Mutation</h3><p>在各种 Flux 实现中，使用常量作为 mutation 类型是一种常见的模式。这允许代码利用工具如 linters，将所有常量放在一个单独文件中，尽可能使协作者对整个应用的 mutation 一目了然。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// mutation-types.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> SOME_MUTATION = <span class="string">'SOME_MUTATION'</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// store.js</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"><span class="keyword">import</span> &#123; SOME_MUTATION &#125; <span class="keyword">from</span> <span class="string">'./mutation-types'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  <span class="attr">state</span>: &#123; ... &#125;,</div><div class="line">  <span class="attr">mutations</span>: &#123;</div><div class="line">    <span class="comment">// 我们能够通过使用“ES2015 属性名表达式”功能，来使用常量作为函数名称</span></div><div class="line">    [SOME_MUTATION] (state) &#123;</div><div class="line">      <span class="comment">// 改变状态</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>是否使用常量在很大程度上是一个偏好 - 在多人合作开发的大型项目中它很有用，但如果你不喜欢使用，它也是完全可选的。</p>
+<h3 id="Mutation-必须是同步函数"><a href="#Mutation-必须是同步函数" class="headerlink" title="Mutation 必须是同步函数"></a>Mutation 必须是同步函数</h3><p>一个重要的原则就是牢记 <strong>mutation 必须是同步函数</strong>。为什么？考虑下面的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">mutations: &#123;</div><div class="line">  someMutation (state) &#123;</div><div class="line">    api.callAsyncMethod(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      state.count++</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在想象我们正在调试应用程序，并查看 devtool 的 mutation 记录。每个 mutation 记录，devtool 将需要捕获每个状态“之前”和“之后”的快照。然而，上面的示例中 mutation 内部的异步回调使得这是不可能的：当 mutation 被提交后，回调函数还未被调用，也没有办法让 devtool 知道回调函数在何时被调用 - 即在回调函数中执行任意状态变更，实际上都无法跟踪。</p>
+<h3 id="组件中提交-Mutation"><a href="#组件中提交-Mutation" class="headerlink" title="组件中提交 Mutation"></a>组件中提交 Mutation</h3><p>可以在组件中使用 <code>this.$store.commit(&#39;xxx&#39;)</code> 提交 mutation，或者使用 <code>mapMutations</code> 工具遍历组件方法到 <code>store.commit</code> 的回调上(需要把 <code>store</code> 注入根组件)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  methods: &#123;</div><div class="line">    ...mapMutations([</div><div class="line">      <span class="string">'increment'</span> <span class="comment">// 映射 this.increment() 到 this.$store.commit('increment')</span></div><div class="line">    ]),</div><div class="line">    ...mapMutations(&#123;</div><div class="line">      <span class="attr">add</span>: <span class="string">'increment'</span> <span class="comment">// 映射 this.add() 到 this.$store.commit('increment')</span></div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="下一步：Actions"><a href="#下一步：Actions" class="headerlink" title="下一步：Actions"></a>下一步：Actions</h3><p>在 mutation 中混合异步调用会导致你的程序很难调试。例如当你调用两个都含有异步回调的方法去改变状态，你如何知道他们何时被调用和哪个回调被首先调用？这正是我们分离 Mutation 和 Action 这两个概念的原因。在 Vuex，<strong>Mutation 必须是同步事务</strong>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.commit(<span class="string">'increment'</span>)</div><div class="line"><span class="comment">// 类型为 "increment" 的 mutation 提交后，可能引起的任意状态变化，都应该在此时同步完成</span></div></pre></td></tr></table></figure>
+<p>为了处理异步操作，接下来我们介绍 <a href="actions.html">Actions</a>。</p>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/vuex/mutations.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

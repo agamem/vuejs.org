@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>嵌套路由 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "vue-router"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link current">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link current">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/index.html" class="sidebar-link">目录</a>
+                </li>
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/getting-started.html" class="sidebar-link">起步</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/dynamic-matching.html" class="sidebar-link">动态路由匹配</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/nested-routes.html" class="sidebar-link current">嵌套路由</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/navigation.html" class="sidebar-link">编程式的导航</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/named-routes.html" class="sidebar-link">命名路由</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/named-views.html" class="sidebar-link">命名视图</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/redirect-and-alias.html" class="sidebar-link">重定向 和 别名</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/essentials/history-mode.html" class="sidebar-link">HTML5 History 模式</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/navigation-guards.html" class="sidebar-link">导航钩子</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/meta.html" class="sidebar-link">路由元信息</a>
+                </li>
+            
+                
+                
+                
+                  <li><h3>进阶</h3></li>
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/transitions.html" class="sidebar-link">过渡动效</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/data-fetching.html" class="sidebar-link">数据获取</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/scroll-behavior.html" class="sidebar-link">滚动行为</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/advanced/lazy-loading.html" class="sidebar-link">路由懒加载</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-link.html" class="sidebar-link">router-link</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-view.html" class="sidebar-link">router-view</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/route-object.html" class="sidebar-link">路由信息对象</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/options.html" class="sidebar-link">Router 构造配置</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/router-instance.html" class="sidebar-link">Router 实例</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vue-router/api/component-injections.html" class="sidebar-link">对组件注入</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content vue-router with-sidebar ">
+    
+      <h1>嵌套路由</h1>
+    
+    
+    <p>实际生活中的应用界面，通常由多层嵌套的组件组合而成。同样地，URL 中各段动态路径也按某种结构对应嵌套的各层组件，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/user/foo/profile                     /user/foo/posts</div><div class="line">+------------------+                  +-----------------+</div><div class="line">| User             |                  | User            |</div><div class="line">| +--------------+ |                  | +-------------+ |</div><div class="line">| | Profile      | |  +------------&gt;  | | Posts       | |</div><div class="line">| |              | |                  | |             | |</div><div class="line">| +--------------+ |                  | +-------------+ |</div><div class="line">+------------------+                  +-----------------+</div></pre></td></tr></table></figure>
+<p>借助 <code>vue-router</code>，使用嵌套路由配置，就可以很简单地表达这种关系。</p>
+<p>接着上节创建的 app：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> User = &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>这里的 <code>&lt;router-view&gt;</code> 是最顶层的出口，渲染最高级路由匹配到的组件。同样地，一个被渲染组件同样可以包含自己的嵌套 <code>&lt;router-view&gt;</code>。例如，在 <code>User</code> 组件的模板添加一个 <code>&lt;router-view&gt;</code>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> User = &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">`</span></div><div class="line">    &lt;div class="user"&gt;</div><div class="line">      &lt;h2&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/h2&gt;</div><div class="line">      &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  `</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要在嵌套的出口中渲染组件，需要在 <code>VueRouter</code> 的参数中使用 <code>children</code> 配置：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User,</div><div class="line">      <span class="attr">children</span>: [</div><div class="line">        &#123;</div><div class="line">          <span class="comment">// 当 /user/:id/profile 匹配成功，</span></div><div class="line">          <span class="comment">// UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中</span></div><div class="line">          path: <span class="string">'profile'</span>,</div><div class="line">          <span class="attr">component</span>: UserProfile</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">          <span class="comment">// 当 /user/:id/posts 匹配成功</span></div><div class="line">          <span class="comment">// UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中</span></div><div class="line">          path: <span class="string">'posts'</span>,</div><div class="line">          <span class="attr">component</span>: UserPosts</div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>要注意，以 <code>/</code> 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。</strong></p>
+<p>你会发现，<code>children</code> 配置就是像 <code>routes</code> 配置一样的路由配置数组，所以呢，你可以嵌套多层路由。</p>
+<p>此时，基于上面的配置，当你访问 <code>/user/foo</code> 时，<code>User</code> 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">path</span>: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User,</div><div class="line">      <span class="attr">children</span>: [</div><div class="line">        <span class="comment">// 当 /user/:id 匹配成功，</span></div><div class="line">        <span class="comment">// UserHome 会被渲染在 User 的 &lt;router-view&gt; 中</span></div><div class="line">        &#123; <span class="attr">path</span>: <span class="string">''</span>, <span class="attr">component</span>: UserHome &#125;,</div><div class="line"></div><div class="line">        <span class="comment">// ...其他子路由</span></div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>提供以上案例的可运行代码，<a href="http://jsfiddle.net/yyx990803/L7hscd8h/" target="_blank" rel="external">戳这里</a>.</p>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/vue-router/essentials/nested-routes.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

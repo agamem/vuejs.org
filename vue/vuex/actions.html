@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Actions - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "vuex"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <script src="/js/vue.js"></script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js v2.0 中文</span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+  进群参与:427447379
+  </span>
+  <ul id="nav">
+    <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/about/" class="nav-link">参与贡献</a></li>
+<li><a href="/vue-router/" class="nav-link">vue-router</a></li>
+<li><a href="/vuex/" class="nav-link current">vuex</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="https://webpack2.leanapp.cn" target="_blank">webpack</a></li>
+<li><a href="/more/" class="nav-link">更多</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">社区</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天室</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">支持 Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            
+            
+            <select class="version-select">
+                <option value="SELF" selected>2.0</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/index.html" class="sidebar-link">Vuex 目录</a>
+                </li>
+            
+                
+                
+                  <li><h3>基础</h3></li>
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/intro.html" class="sidebar-link">什么是 Vuex</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getting-started.html" class="sidebar-link">起步</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/state.html" class="sidebar-link">State</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/getters.html" class="sidebar-link">Getters</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/mutations.html" class="sidebar-link">Mutations</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/actions.html" class="sidebar-link current">Actions</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/modules.html" class="sidebar-link">Modules</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/structure.html" class="sidebar-link">应用结构</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/plugins.html" class="sidebar-link">插件</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/strict.html" class="sidebar-link">严格模式</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/forms.html" class="sidebar-link">表单处理</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/testing.html" class="sidebar-link">测试</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/hot-reload.html" class="sidebar-link">热重载</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/vuex/api.html" class="sidebar-link">API 参考</a>
+                </li>
+            
+             
+        </ul>
+    </div>
+</div>
+
+
+<div class="content vuex with-sidebar ">
+    
+      <h1>Actions</h1>
+    
+    
+    <p>action 和 mutation 类似，区别在于：</p>
+<ul>
+<li>action 不改变状态，只提交(commit) mutation。</li>
+<li>action 可以包含任意异步操作。</li>
+</ul>
+<p>让我们注册一个简单的 action：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  <span class="attr">state</span>: &#123;</div><div class="line">    <span class="attr">count</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">mutations</span>: &#123;</div><div class="line">    increment (state) &#123;</div><div class="line">      state.count++</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">actions</span>: &#123;</div><div class="line">    increment (context) &#123;</div><div class="line">      context.commit(<span class="string">'increment'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Action 处理函数接收一个上下文对象(context object)，该对象提供了跟 store 实例相同的方法/属性，因此你可以调用 <code>context.commit</code> 提交一个 mutation，或者通过 <code>context.state</code> 和 <code>context.getters</code> 访问 state 和 getters。稍后我们会介绍 <a href="modules.html">Modules</a>，我们将看到为什么上下文对象 (context object) 不是 store 实例自身。</p>
+<p>在实践中，我们经常用到 ES2015 <a href="https://github.com/lukehoban/es6features#destructuring" target="_blank" rel="external">参数解构</a> 来简化代码（特别是我们要多次调用 <code>commit</code> 的时候）：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  increment (&#123; commit &#125;) &#123;</div><div class="line">    commit(<span class="string">'increment'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="分发-Dispatch-Action"><a href="#分发-Dispatch-Action" class="headerlink" title="分发(Dispatch) Action"></a>分发(Dispatch) Action</h3><p>使用 <code>store.dispatch</code> 方法触发 action。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.dispatch(<span class="string">'increment'</span>)</div></pre></td></tr></table></figure>
+<p>这看起来很蠢：如果我们想增加 count，为什么我们不直接调用 <code>store.commit(&#39;increment&#39;)</code>？回想起<strong>mutation 必须是同步函数</strong> 了吗？action 可以不是同步函数。我们可以在 action 回调函数中执行 <strong>异步操作</strong>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  incrementAsync (&#123; commit &#125;) &#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      commit(<span class="string">'increment'</span>)</div><div class="line">    &#125;, <span class="number">1000</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>action 同样支持 payload 格式和对象风格的 dispatch：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// dispatch 传入 payload</span></div><div class="line">store.dispatch(<span class="string">'incrementAsync'</span>, &#123;</div><div class="line">  <span class="attr">amount</span>: <span class="number">10</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// dispatch 传入一个对象</span></div><div class="line">store.dispatch(&#123;</div><div class="line">  <span class="attr">type</span>: <span class="string">'incrementAsync'</span>,</div><div class="line">  <span class="attr">amount</span>: <span class="number">10</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>日常生活行为中，更实际的例子是购物车结帐，涉及<strong>调用异步 API</strong>和<strong>分发多重 mutations</strong>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  checkout (&#123; commit, state &#125;, payload) &#123;</div><div class="line">    <span class="comment">// 把当前购物车的商品备份起来</span></div><div class="line">    <span class="keyword">const</span> savedCartItems = [...state.cart.added]</div><div class="line">    <span class="comment">// 发送结帐请求，并愉快地清空购物车</span></div><div class="line">    commit(types.CHECKOUT_REQUEST)</div><div class="line">    <span class="comment">// 购物 API 接收一个成功回调和一个失败回调</span></div><div class="line">    shop.buyProducts(</div><div class="line">      products,</div><div class="line">      <span class="comment">// 成功操作</span></div><div class="line">      () =&gt; commit(types.CHECKOUT_SUCCESS),</div><div class="line">      <span class="comment">// 失败操作</span></div><div class="line">      () =&gt; commit(types.CHECKOUT_FAILURE, savedCartItems)</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，我们执行的是一个异步操作的流程，并通过提交 action 来记录其副作用（状态变化）。</p>
+<h3 id="组件中分发-Action"><a href="#组件中分发-Action" class="headerlink" title="组件中分发 Action"></a>组件中分发 Action</h3><p>使用 <code>this.$store.dispatch(&#39;xxx&#39;)</code>（需要根组件中注入 <code>store</code> ）在组件中分发 action，使用 <code>mapActions</code> 工具函数，映射组件方法到调用 <code>store.dispatch</code>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; mapActions &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  methods: &#123;</div><div class="line">    ...mapActions([</div><div class="line">      <span class="string">'increment'</span> <span class="comment">// 映射 this.increment() 到 this.$store.dispatch('increment')</span></div><div class="line">    ]),</div><div class="line">    ...mapActions(&#123;</div><div class="line">      <span class="attr">add</span>: <span class="string">'increment'</span> <span class="comment">// map this.add() to this.$store.dispatch('increment')</span></div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="组合多个-Action"><a href="#组合多个-Action" class="headerlink" title="组合多个 Action"></a>组合多个 Action</h3><p>Action 通常是异步的，所以我们如何知道一个 action 何时完成？更重要的是，我们如何组合多个 action 一起操作复杂的异步流程？</p>
+<p>第一件事是知道 <code>store.dispatch</code> 返回『action 回调函数被触发后的返回值』，所以你可以在 action 中返回一个 Promise 对象。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  actionA (&#123; commit &#125;) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        commit(<span class="string">'someMutation'</span>)</div><div class="line">        resolve()</div><div class="line">      &#125;, <span class="number">1000</span>)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在你可以这么做：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.dispatch(<span class="string">'actionA'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后在另一个 action ：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  actionB (&#123; dispatch, commit &#125;) &#123;</div><div class="line">    <span class="keyword">return</span> dispatch(<span class="string">'actionA'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      commit(<span class="string">'someOtherMutation'</span>)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最后，如果我们使用 <a href="https://tc39.github.io/ecmascript-asyncawait/" target="_blank" rel="external">async / await</a>，很快落地的 JavaScript 特性，我们可以这样组合我们的 action：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 假定 getData() and getOtherData() 返回的是 Promise</span></div><div class="line"></div><div class="line">actions: &#123;</div><div class="line">  <span class="keyword">async</span> actionA (&#123; commit &#125;) &#123;</div><div class="line">    commit(<span class="string">'gotData'</span>, <span class="keyword">await</span> getData())</div><div class="line">  &#125;,</div><div class="line">  <span class="keyword">async</span> actionB (&#123; dispatch, commit &#125;) &#123;</div><div class="line">    <span class="keyword">await</span> dispatch(<span class="string">'actionA'</span>) <span class="comment">// 等待 actionA 结束</span></div><div class="line">    commit(<span class="string">'gotOtherData'</span>, <span class="keyword">await</span> getOtherData())</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>store.dispatch</code> 可能会在不同模块中，触发多个 action 回调函数。在这种情况下，返回值是一个 Promise 对象，该对象在所有被触发的回调都 resolve 之后自己再 resolve。</p>
+</blockquote>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/dingyiming/vuejs.org/tree/2.0-cn/src/vuex/actions.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>
